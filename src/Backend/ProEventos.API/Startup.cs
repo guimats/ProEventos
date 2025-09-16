@@ -47,6 +47,8 @@ namespace ProEventos
 
             app.UseAuthorization();
 
+            app.UseCors(access => access.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
